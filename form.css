@@ -1,0 +1,75 @@
+/* Wrapper styling only — the CRM embed brings its own donation-form styles inline. */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1f2937;
+    background: #f5eee0;
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 24px;
+}
+
+h1.main-heading {
+    font-size: 22px;
+    margin: 0 0 16px;
+    color: #1e5aa8;
+}
+
+.table-info {
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.table-info .row {
+    display: flex;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.table-info .row:last-child {
+    border-bottom: none;
+}
+
+.table-info .cell {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.table-info .cell:first-child {
+    font-weight: 600;
+    color: #4b5563;
+    width: 160px;
+    background: #f9fafb;
+}
+
+.table-info-cell-value {
+    color: #1f2937;
+    font-family: SFMono-Regular, Consolas, monospace;
+    font-size: 12px;
+}
+
+.roundedblock {
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.block-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.block-header .row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.block-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #1f2937;
+}
