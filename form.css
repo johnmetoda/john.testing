@@ -1,10 +1,22 @@
-/* Wrapper styling only — the CRM embed brings its own donation-form styles inline. */
+/* Wrapper styling only — the CRM embed brings its own donation-form styles inline.
+   Body uses a warm painted-gradient background so the transparent-vs-white behavior
+   of #payments-ui-iframe (PID-208) is visually testable: if the transparency change
+   worked, the gradient shows through the payment container; if it didn't, you'll see
+   a white/off-white rectangle sitting on top of the gradient. */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: #1f2937;
-    background: #f5eee0;
+    background:
+        linear-gradient(135deg,
+            #e8c39e 0%,
+            #d4a574 25%,
+            #b78a5a 55%,
+            #a17a54 80%,
+            #8f6b48 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
     max-width: 720px;
-    margin: 24px auto;
+    margin: 0 auto;
     padding: 24px;
 }
 
@@ -50,10 +62,13 @@ h1.main-heading {
 }
 
 .roundedblock {
-    background: #ffffff;
-    border: 1px solid #d0d5dd;
-    border-radius: 8px;
-    padding: 20px;
+    /* Transparent so the body gradient shows through — this is what lets us see
+       whether #payments-ui-iframe inside the CRM embed is honoring the PID-208
+       background: transparent change. If the container renders as a white/gray
+       rectangle here, the change didn't ship or didn't apply. */
+    background: transparent;
+    border: none;
+    padding: 20px 0;
 }
 
 .block-header {
