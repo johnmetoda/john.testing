@@ -31,7 +31,7 @@
         </div>
         <div class="row">
             <div class="cell">Purpose:</div>
-            <div class="cell table-info-cell-value">PID-208 layout QA — PR #10950 fix visible (transparent bg, width: 100%, loading indicator anchored 300px)</div>
+            <div class="cell table-info-cell-value">PID-208 layout QA — PR #10950 c303ac1: UMD conditional in self-hosted PaymentWidget.cs + margin: 0 auto centering</div>
         </div>
     </div>
 
@@ -626,21 +626,35 @@
 '<label for="PayPalVenmo"><input id="PayPalVenmo" name="payment-type" class="required" type="radio" maxlength="255"></input><span class="label">PayPal or Venmo</span></label>' +
 '</div>' +
 '<div class="field text payment required" id="one-pay-fields">' +
-'                                    <div class="payment-container">' +
-'                                        <div class="loading-indicator" id="loading-indicator" style="max-width: 300px; margin: 0;">' +
-'                                            <div class="loading-text">Loading secure checkout frame...</div>' +
-'                                        </div>' +
-'                                        <div id="payments-ui-iframe" style="background: transparent; width: 100%; max-width: 380px;">' +
-'                                            <iframe id="payments-iframe"' +
-'                                                    style="width:100%; height:650px"' +
-'                                                    frameborder="0"' +
-'                                                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-popups-to-escape-sandbox"' +
-'                                                    allow="payment *; encrypted-media *; fullscreen *; accelerometer; autoplay; clipboard-write; picture-in-picture; publickey-credentials-get *; camera *"' +
-'                                                    referrerpolicy="strict-origin-when-cross-origin">' +
-'                                            </iframe>' +
+'                                <div class="payment-container">' +
+'                                    <style>' +
+'                                        .onepay-loading-container {' +
+'                                            display: flex;' +
+'                                            justify-content: center;' +
+'                                            align-items: center;' +
+'                                            min-height: 200px;' +
+'                                            max-width: 300px;' +
+'                                            margin: 0 auto;' +
+'                                        }' +
+'                                        .onepay-loading-spinner {' +
+'                                            width: 40px;' +
+'                                            height: 40px;' +
+'                                            border: 3.6px solid rgba(63, 143, 36, 0.15);' +
+'                                            border-top-color: #3F8F24;' +
+'                                            border-radius: 50%;' +
+'                                            animation: onepay-loading-spin 1.4s linear infinite;' +
+'                                        }' +
+'                                        @keyframes onepay-loading-spin {' +
+'                                            to { transform: rotate(360deg); }' +
+'                                        }' +
+'                                    </style>' +
+'                                    <div id="payments-ui-iframe" style="background: transparent; width: 100%; max-width: 380px; margin: 0 auto;">' +
+'                                        <div class="onepay-loading-container" id="loading-indicator">' +
+'                                            <div class="onepay-loading-spinner" role="progressbar" aria-label="Loading payment form"></div>' +
 '                                        </div>' +
 '                                    </div>' +
 '                                </div>' +
+'                            </div>' +
 '' +
 '</div>' +
 '    ' +
