@@ -31,7 +31,7 @@
         </div>
         <div class="row">
             <div class="cell">Purpose:</div>
-            <div class="cell table-info-cell-value">PID-208 layout QA — PR #10950 c303ac1: UMD conditional in self-hosted PaymentWidget.cs + margin: 0 auto centering</div>
+            <div class="cell table-info-cell-value">PID-208 layout QA — PR #10950 2748129: UMD conditional retained, margin: 0 auto reverted so payment area matches left-anchored form inputs</div>
         </div>
     </div>
 
@@ -634,7 +634,7 @@
 '                                            align-items: center;' +
 '                                            min-height: 200px;' +
 '                                            max-width: 300px;' +
-'                                            margin: 0 auto;' +
+'                                            margin: 0;' +
 '                                        }' +
 '                                        .onepay-loading-spinner {' +
 '                                            width: 40px;' +
@@ -648,7 +648,7 @@
 '                                            to { transform: rotate(360deg); }' +
 '                                        }' +
 '                                    </style>' +
-'                                    <div id="payments-ui-iframe" style="background: transparent; width: 100%; max-width: 380px; margin: 0 auto;">' +
+'                                    <div id="payments-ui-iframe" style="background: transparent; width: 100%; max-width: 380px;">' +
 '                                        <div class="onepay-loading-container" id="loading-indicator">' +
 '                                            <div class="onepay-loading-spinner" role="progressbar" aria-label="Loading payment form"></div>' +
 '                                        </div>' +
