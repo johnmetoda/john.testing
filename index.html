@@ -3,27 +3,27 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>john.testing — QA embed (qa5)</title>
+    <title>john.testing — QA embed (qa-develop)</title>
     <link rel="stylesheet" type="text/css" href="form.css" />
 </head>
 <body>
-    <h1 class="main-heading">Online Donation Test (self-hosted, qa5)</h1>
+    <h1 class="main-heading">Online Donation Test (self-hosted, qa-develop)</h1>
     <div class="table-info">
         <div class="row">
             <div class="cell">Environment:</div>
-            <div class="cell table-info-cell-value">qa5.bloomerang.co</div>
+            <div class="cell table-info-cell-value">qa-develop-crm.bloomerang.co</div>
         </div>
         <div class="row">
             <div class="cell">Org:</div>
-            <div class="cell table-info-cell-value">Jared 34 Ordway (test DB)</div>
+            <div class="cell table-info-cell-value">Jared 42 Ordway (test DB)</div>
         </div>
         <div class="row">
             <div class="cell">Widget ID:</div>
-            <div class="cell table-info-cell-value">14336</div>
+            <div class="cell table-info-cell-value">53248 (Donation — Test SelfHosted)</div>
         </div>
         <div class="row">
             <div class="cell">Processor:</div>
-            <div class="cell table-info-cell-value">OnePay (UMD path — mountOnePayCheckoutUmd, 1pay.qa5)</div>
+            <div class="cell table-info-cell-value">OnePay (UMD path — mountOnePayCheckoutUmd, 1pay.qa-develop)</div>
         </div>
         <div class="row">
             <div class="cell">Self Hosted:</div>
@@ -31,7 +31,7 @@
         </div>
         <div class="row">
             <div class="cell">Purpose:</div>
-            <div class="cell table-info-cell-value">PID-208 layout QA — PR #10950 2748129: UMD conditional retained, margin: 0 auto reverted so payment area matches left-anchored form inputs</div>
+            <div class="cell table-info-cell-value">PID-208 layout QA on qa-develop — donation self-hosted path baked from PR #10950 code</div>
         </div>
     </div>
 
@@ -42,10 +42,10 @@
             </div>
         </div>
 
-<script type="text/javascript" id="bloomerangForm14336"></script>
+<script type="text/javascript" id="bloomerangForm53248"></script>
 <pre><script type="text/javascript">
-    var insertForm14336 = function() {
-        var html14336 = '<style text=\'text/css\'>' +
+    var insertForm53248 = function() {
+        var html53248 = '<style text=\'text/css\'>' +
 '.donation-form label{color: #404040;' +
 '                display: block;}' +
 '' +
@@ -178,26 +178,11 @@
 '</div>' +
 '    <div class="section recurring">' +
 '      <div class="field checkbox recurring" >' +
-'<label for="recurring"><input id="recurring" name="recurring" type="checkbox" maxlength="255"></input><span class="label">Show my support by making this a recurring donation</span></label>' +
+'<label for="recurring"><input id="recurring" name="recurring" type="checkbox" maxlength="255"></input><span class="label">Show my support by making this a monthly donation</span></label>' +
 '</div>' +
 '<div class="field label recurring-paypal-venmo-label-info" >' +
 '<label for="recurring-paypal-venmo-label-info"><span class="label">(Not available for payments made through PayPal or Venmo.)</span></label>' +
 '<html id="recurring-paypal-venmo-label-info" name="recurring-paypal-venmo-label-info" type="label" maxlength="255"></html>' +
-'</div>' +
-'<div class="field  frequency required" style="display: none">' +
-'<label for="frequency">Frequency<span class="required-star">*</span></label>' +
-'<select id="frequency" name="frequency" class="required"><option value=""></option>' +
-'<option value="Daily">Daily</option>' +
-'<option value="Weekly">Weekly</option>' +
-'<option value="Monthly" selected>Monthly</option>' +
-'<option value="Quarterly">Quarterly</option>' +
-'<option value="SemiAnnually">Every six months</option>' +
-'<option value="Yearly">Yearly</option>' +
-'</select>' +
-'</div>' +
-'<div class="field date start-date required" style="display: none">' +
-'<label for="start-date"><span class="label">Start Date</span><span class="required-star">*</span></label>' +
-'<input id="start-date" name="start-date" class="validDate startDateVenmo required" type="date" placeholder="mm/dd/yyyy"></input>' +
 '</div>' +
 '' +
 '</div>' +
@@ -210,7 +195,7 @@
 '</div>' +
 '    <div class="section fund">' +
 '      <div class="field  fund" style="display: none">' +
-'<input id="fund" name="fund" value="11" maxlength="255"></input>' +
+'<input id="fund" name="fund" value="10" maxlength="255"></input>' +
 '</div>' +
 '' +
 '</div>' +
@@ -597,7 +582,7 @@
 '</div>' +
 '    <div class="section consent hidden">' +
 '      <div class="field checkbox consent-all" >' +
-'<label for="consent-all"><input id="consent-all" name="consent-all" type="checkbox" maxlength="255"></input><span class="label">I would like to receive or continue receiving updates from Jared 34 Ordway</span></label>' +
+'<label for="consent-all"><input id="consent-all" name="consent-all" type="checkbox" maxlength="255"></input><span class="label">I would like to receive or continue receiving updates from Jared 42 Ordway</span></label>' +
 '</div>' +
 '<div class="field checkbox consent-email" style="display: none">' +
 '<label for="consent-email"><input id="consent-email" name="consent-email" type="checkbox" checked="checked" maxlength="255"></input><span class="label">by email</span></label>' +
@@ -611,7 +596,7 @@
 '' +
 '</div>' +
 '    <div class="section captcha">' +
-'      <label id=\'noCaptchaResponseError\' class=\'error noCaptchaResponseError\' style=\'display: none\'>You must fill out the CAPTCHA</label><div id="captcha14336"></div>' +
+'      <label id=\'noCaptchaResponseError\' class=\'error noCaptchaResponseError\' style=\'display: none\'>You must fill out the CAPTCHA</label><div id="captcha53248"></div>' +
 '' +
 '</div>' +
 '    <div class="section payment">' +
@@ -669,32 +654,32 @@
 '  <h2>Processing...</h2><p>Your transaction is being processed. Please do not close your browser or leave this page.</p>' +
 '</div>' +
 '' +
-'' +  '';var successHtml14336 = '<div class=\'donation-success\'>' +
+'' +  '';var successHtml53248 = '<div class=\'donation-success\'>' +
                                                        '  <h2>Thank You for Your Donation!</h2>' +
                                                        '  <p>Your generous gift has been processed. We truly appreciate your continued support.</p>' +
                                                         '   ' +
-                                                        '</div>';( function($) {if (Bloomerang.useDonationId('14336')) {
+                                                        '</div>';( function($) {if (Bloomerang.useDonationId('53248')) {
                                 Bloomerang.useProcessor('12289', 'OnePay', 'pk_test_ql0ubtsHyv0J0GZJ5po6MZYw');
                             } else {
-                                html14336 = '<p style="color: red">Only one donation or event registration form can be used on each page.</p>';
-                            }if (jQuery('#bloomerangForm14336').length) {
+                                html53248 = '<p style="color: red">Only one donation or event registration form can be used on each page.</p>';
+                            }if (jQuery('#bloomerangForm53248').length) {
 
                     if (window.ActiveXObject) { // they are using IE < 11, which doesn't support TLS 1.1
-                        html14336 = '<p style="color: red">Your browser does not support the minimum security requirements for keeping your Credit Card information safe when processing payments. Please upgrade your browser or download the latest version of' +
+                        html53248 = '<p style="color: red">Your browser does not support the minimum security requirements for keeping your Credit Card information safe when processing payments. Please upgrade your browser or download the latest version of' +
                         ' <a target=\'_blank\' href=\'https://www.google.com/chrome/browser/desktop/\'>Chrome</a> or <a target=\'_blank\' href=\'https://www.mozilla.org/en-US/firefox/new/\'>Firefox</a>.</p>';
                     }
-                        jQuery('#bloomerangForm14336').after(html14336);
+                        jQuery('#bloomerangForm53248').after(html53248);
 
 
                         Bloomerang.Util.requireStripe(function() {
-                              Bloomerang.useKey('pub_bbf2d69c-eb18-11f0-a27b-064d554a3493');
+                              Bloomerang.useKey('pub_2b3f1e53-05f7-11f1-9c20-02b61eb7aa59');
                               jQuery("form.donation-form .DebitCard, #donation-form .DebitCard").remove();jQuery("form.donation-form .CreditCard, #donation-form .CreditCard").remove();Bloomerang.Data.PayPal.IsPayPalVenmoEnabled = false;
                                            jQuery("form.donation-form .recurring-paypal-venmo-label-info, #donation-form .recurring-paypal-venmo-label-info").remove();
                                            jQuery("#paypal-button-container").remove();
                                            jQuery("form.donation-form .PayPalVenmo, #donation-form .PayPalVenmo").remove();
                                            jQuery("form.donation-form .PayPal, #donation-form .PayPal").remove();
                                            jQuery("form.donation-form .Venmo, #donation-form .Venmo").remove();jQuery("form.donation-form .section.payment h3, #donation-form .section.payment h3").remove();jQuery("form.donation-form .section.movedpayment h3, #donation-form .section.movedpayment h3").remove();
-                              Bloomerang.Util.mountOnePayCheckoutUmd('https://1pay.qa5.dev-bloom-apps.net');
+                              Bloomerang.Util.mountOnePayCheckoutUmd('https://1pay.qa-develop.dev-bloom-apps.net');
                               jQuery("#express-submit").attr("disabled", false);
                             });
                         Bloomerang.Data.PayPal.IsPayPalVenmoEnabled = false;
@@ -719,7 +704,7 @@ Bloomerang.Data.PayPal.IsPayPalPaymentMethodVaultingEnabled = false;Bloomerang.D
                     Bloomerang.transactionFeePayPal = 0.49;
                     Bloomerang.transactionFeeRatePayPal = 0.032;
 
-                    Bloomerang.useKey('pub_bbf2d69c-eb18-11f0-a27b-064d554a3493');
+                    Bloomerang.useKey('pub_2b3f1e53-05f7-11f1-9c20-02b61eb7aa59');
 
         if (typeof isPreviewMode !== 'undefined' && isPreviewMode) {
           document.querySelector('#preview-text').style.display = 'block';
@@ -837,7 +822,7 @@ Bloomerang.Data.PayPal.IsPayPalPaymentMethodVaultingEnabled = false;Bloomerang.D
             jQuery("#donation-processing-container").hide();
             var formContainer = jQuery("#donation-form-container");
             formContainer.show();
-            formContainer.html(successHtml14336);
+            formContainer.html(successHtml53248);
             Bloomerang.scrollToElement(formContainer);
         };
         Bloomerang.Api.OnError = Bloomerang.Widget.Donation.OnError = function (response) {
@@ -1511,12 +1496,12 @@ Bloomerang.Data.PayPal.IsPayPalPaymentMethodVaultingEnabled = false;Bloomerang.D
                         window.bloomerangLoadStarted = true;
                         var script = document.createElement('script');
                         script.type = 'text/javascript';
-                        script.src = 'https://qa5.bloomerang.co/Content/Scripts/Api/Bloomerang-v2.js?nocache=1783693910';
+                        script.src = 'https://qa-develop-crm.bloomerang.co/Content/Scripts/Api/Bloomerang-v2.js?nocache=1783703978';
                         document.getElementsByTagName('head')[0].appendChild(script);
-                        waitForBloomerangLoad(function() { Bloomerang.Util.requireJQueryValidationAndStripe(function() { insertForm14336(); })});
+                        waitForBloomerangLoad(function() { Bloomerang.Util.requireJQueryValidationAndStripe(function() { insertForm53248(); })});
                     }
                     else {
-                        waitForBloomerangLoad(function() { Bloomerang.Util.requireJQueryValidationAndStripe(function() { insertForm14336(); })});
+                        waitForBloomerangLoad(function() { Bloomerang.Util.requireJQueryValidationAndStripe(function() { insertForm53248(); })});
                     }
                 };
 
